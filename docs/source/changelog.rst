@@ -36,4 +36,3 @@ Initial public release of SoloMicrobe.
 - Frontend: Svelte
 - Alignment: RazerS3
 - Visualization: JBrowse 2
-- Documentation: Read the Docs
