@@ -25,15 +25,15 @@ c. **Ensure binaries are available:**
 2. Input Preparation
 --------------------
 
-- **Gene Sequence Input:**  
-  Prepare your gene sequence(s) in FASTA format. Each entry must start with a header line (beginning with `>`), followed by the nucleotide sequence.
+- **Gene/Transcript Sequence Input:**  
+  Prepare your gene/transcript sequence(s) in FASTA format. Each entry must start with a header line (beginning with `>`), followed by the nucleotide sequence.
 
 - **Probe Sequence Input:**  
   Prepare your probe sequences in FASTA format. Each probe should have a unique header.
 
-- **Only one input type (gene or probe) is allowed per run.**
+- **Only one input type (gene/transcript or probe) is allowed per run.**
 
-**Example: Gene Sequence FASTA**
+**Example: Gene/Transcript Sequence FASTA**
 
 .. code-block:: text
 
