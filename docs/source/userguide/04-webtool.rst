@@ -13,7 +13,7 @@ General Overview
 
 2. **Choose Input Type**
 
-   - Select either "Gene Sequence" or "Probe Sequence" at the top of the form.
+   - Select either "Gene/Transcript Sequence" or "Probe Sequence" at the top of the form.
    - Only one input type can be used per submission.
 
 3. **Paste Your Sequence**
@@ -30,7 +30,7 @@ General Overview
 
 5. **Set Parameters (Optional)**
 
-   - For gene input: Set "Probe Length" (default: 30; range: 20–50).
+   - For gene/transcript input: Set "Probe Length" (default: 30; range: 20–50).
    - Set "K-mer Length" (default: 14; minimum: 14).
    - Set "Max Mismatches" (default: 2; range: 0–2).
 
@@ -47,7 +47,7 @@ Preprocessing Steps and Recommendations
 
    - Ensure all input sequences are in valid FASTA format.
    - Remove any non-standard characters or ambiguous bases (only A, T, C, G, N are accepted).
-   - For gene input, use full-length coding sequences or transcripts for best results.
+   - For gene/transcript input, use full-length coding sequences or transcripts for best results.
    - For probe input, ensure each probe is on a separate entry with a unique header.
 
 2. **Input Size and Complexity (recommended but not mandatory)**
