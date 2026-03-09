@@ -7,7 +7,7 @@ To ensure reliable, accurate, and efficient results when using the Probe Designe
 --------------------
 
 - **FASTA Format:**  
-  Always use a valid FASTA format for gene and probe sequences. Each entry must start with a header line (`>`) followed by the sequence.
+  Always use a valid FASTA format for gene/transcript and probe sequences. Each entry must start with a header line (`>`) followed by the sequence.
 
 - **Sequence Quality:**  
   Remove non-standard characters. Use high-quality, full-length coding sequences.
@@ -16,7 +16,7 @@ To ensure reliable, accurate, and efficient results when using the Probe Designe
   For probes, include metadata (e.g., start/end positions, gene IDs) in the header for easier tracking and downstream analysis.
 
 - **Input Size:**  
-  For very large genes or probe sets, consider splitting into smaller jobs to avoid long processing times.
+  For very large genes/transcripts or probe sets, consider splitting into smaller jobs to avoid long processing times.
 
 2. Parameter Selection
 ----------------------
