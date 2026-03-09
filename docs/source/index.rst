@@ -58,3 +58,5 @@ This guide explains how to use the Probe Designer web interface to submit your g
 
    quickstart
    userguide
+   changelog
+
