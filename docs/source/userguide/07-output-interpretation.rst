@@ -61,9 +61,9 @@ All candidate probes generated from the input gene sequence before any filtering
 
 .. code-block:: text
 
-   >probe_0|start=1|end=36|transcript:ENSB:3PgobK0mHtDbpdO
+   >probe_0|start=1|end=36
    ATGAAGGGTTCCGACGGCACCTCGCCGCGCACCACG
-   >probe_1|start=2|end=37|transcript:ENSB:3PgobK0mHtDbpdO
+   >probe_1|start=2|end=37
    TGAAGGGTTCCGACGGCACCTCGCCGCGCACCACGG
 
 **Interpretation:**
@@ -114,7 +114,7 @@ Same as ``filtered_probe_alignments.sam`` with an additional species annotation 
 
 .. code-block:: text
 
-   probe_894|start=1020|end=1055|transcript:ENSB:3PgobK0mHtDbpdO  16  MGYG000001701_39  MGYG000001701_39  92544  255  36M  *  0  0  ...  NM:i:2  MD:Z:14C6A14  SP:Z:Corynebacterium afermentans
+   probe_894|start=1020|end=1055  16  MGYG000001701_39  MGYG000001701_39  92544  255  36M  *  0  0  ...  NM:i:2  MD:Z:14C6A14  SP:Z:Corynebacterium afermentans
 
 **Additional field:**
 
@@ -146,34 +146,40 @@ Probes that did **not** align to any reference target within the mismatch thresh
 kmer_matches_report.txt
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Results of the k-mer safety check, which screens non-aligned probes for short exact matches (default: 14-mers) against reference coding regions.
+Results of the k-mer safety check, which screens non-aligned probes for short exact matches (default: 14-mers) against reference targets (host transcriptome and/or microbiome genomes).
 
 **Example:**
 
 .. code-block:: text
 
-   14-mer Match Report with coding Filtering
+   14-mer Match Report
    ================================================================================
 
-   Total probes checked: 990
-   Unsafe probes (coding matches): 0
-   Safe probes (non-coding only): 990
-   Total 14-mer matches found: 1,629,433
+   Total probes checked: 231
+   Unsafe probes (k-mer matches): 212
+   Safe probes (no matches): 19
+   Total 14-mer matches found: 31,094
 
    ================================================================================
-   SAFE PROBES (non-coding matches only or no matches)
+   UNSAFE PROBES
    ================================================================================
 
-   probe_0|start=1|end=36|transcript:ENSB:3PgobK0mHtDbpdO:
-     Total matches: 41133
-     coding matches: 0
+   probe_0|start=1|end=30:
+     Total matches: 600
+
+   ================================================================================
+   SAFE PROBES
+   ================================================================================
+
+   probe_195|start=206|end=235:
+     Total matches: 0
 
 **Interpretation:**
 
-- **Unsafe probes (coding matches):** Probes with k-mer matches to coding regions of host/microbiome — these are removed
-- **Safe probes (non-coding only):** Probes with matches only to non-coding regions (intergenic, intronic) or no matches — these are kept
-- A probe with many total matches but 0 coding matches is still considered safe
+- **Unsafe probes (k-mer matches):** Probes with k-mer matches to the reference targets — these are removed
+- **Safe probes (no matches):** Probes with no k-mer matches to any reference target — these are kept
 - The k-mer length is configurable (default: 14 bp); longer k-mers are more stringent
+- **Total matches** shows the number of k-mer hits found for each probe across all reference sequences
 
 
 safe_probes.fa
@@ -185,14 +191,14 @@ The final set of probes that passed both alignment filtering and k-mer safety ch
 
 .. code-block:: text
 
-   >probe_24|start=33|end=68|transcript:ENSB:3PgobK0mHtDbpdO
+   >probe_24|start=33|end=68
    CACGGACGCGCCGATCGCGGTCGTCGGACTGTCCTG
-   >probe_25|start=34|end=69|transcript:ENSB:3PgobK0mHtDbpdO
+   >probe_25|start=34|end=69
    ACGGACGCGCCGATCGCGGTCGTCGGACTGTCCTGC
 
 **Interpretation:**
 
-- These probes have no significant off-target alignments to host or microbiome coding sequences
+- These probes have no significant off-target alignments to host or microbiome sequences
 - They are suitable for use in spatial transcriptomics, FISH, or other hybridization-based assays
 - If this file is empty, no probes passed all filters — consider relaxing parameters (e.g., increasing max mismatches or reducing k-mer length)
 
@@ -207,9 +213,9 @@ Ranked list of safe probes scored by thermodynamic and sequence quality metrics.
 .. code-block:: text
 
    Rank  Probe ID                                                     Sequence                              Score  Tm(°C)  GC%   Len  Complexity  SecStruct  Homopoly  Status
-   1     probe_319|start=349|end=384|transcript:ENSB:3PgobK0mHtDbpdO  CGCGACAGCCGTACCGGCGTGTACATCGGAGTGATC  91.55  49.20   63.9  36   0.971       0.000      No        Excellent
-   2     probe_318|start=348|end=383|transcript:ENSB:3PgobK0mHtDbpdO  CCGCGACAGCCGTACCGGCGTGTACATCGGAGTGAT  88.49  50.22   63.9  36   0.971       0.000      No        Very Good
-   3     probe_24|start=33|end=68|transcript:ENSB:3PgobK0mHtDbpdO     CACGGACGCGCCGATCGCGGTCGTCGGACTGTCCTG  76.15  53.06   72.2  36   0.922       0.000      No        Good
+   1     probe_319|start=349|end=384  CGCGACAGCCGTACCGGCGTGTACATCGGAGTGATC  91.55  49.20   63.9  36   0.971       0.000      No        Excellent
+   2     probe_318|start=348|end=383  CCGCGACAGCCGTACCGGCGTGTACATCGGAGTGAT  88.49  50.22   63.9  36   0.971       0.000      No        Very Good
+   3     probe_24|start=33|end=68     CACGGACGCGCCGATCGCGGTCGTCGGACTGTCCTG  76.15  53.06   72.2  36   0.922       0.000      No        Good
 
 **Column descriptions:**
 
