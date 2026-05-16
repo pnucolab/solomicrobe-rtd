@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'SoloMicrobe'
+project = 'SHARP-FISH'
 copyright = '2026, COLAB@PNU'
 author = 'Mekonnen Abyot Melkamu'
 
