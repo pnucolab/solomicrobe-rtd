@@ -1,7 +1,7 @@
-SoloMicrobe
+SHARP-FISH
 ==========================
 
-**SoloMicrobe** is a microbial probe designer tool. It is a Pipeline that designs, filters, scores, and reports oligonucleotide probes for input sequences to target microbial transcripts while checking against host/microbiome references. It produces candidate and "safe" probes (with scoring) to support microbial spatial transcriptomics studies.
+**SHARP-FISH** is a microbial probe designer tool. It is a Pipeline that designs, filters, scores, and reports oligonucleotide probes for input sequences to target microbial transcripts while checking against host/microbiome references. It produces candidate and "safe" probes (with scoring) to support microbial spatial transcriptomics studies.
 
 Quick Start to use the web interface
 ------------------------------------
