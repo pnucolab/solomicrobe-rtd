@@ -6,7 +6,7 @@ with io.open("README.rst", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="SoloMicrobe",
+    name="SHARP-FISH",
     version="0.1.0",
     author="Mekonnen Abyot Melkamu",
     author_email="abyot@pusan.ac.kr",
