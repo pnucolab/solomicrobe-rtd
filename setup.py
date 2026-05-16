@@ -10,7 +10,7 @@ setuptools.setup(
     version="0.1.0",
     author="Mekonnen Abyot Melkamu",
     author_email="abyot@pusan.ac.kr",
-    description="SoloMicrobe",
+    description="SHARP-FISH",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/pnucolab/probe-designer-rtd-tutorial",
