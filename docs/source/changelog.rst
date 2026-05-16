@@ -1,7 +1,7 @@
 Version History
 ===============
 
-This page documents the release history of SoloMicrobe, including new features, improvements, and bug fixes.
+This page documents the release history of SHARP-FISH, including new features, improvements, and bug fixes.
 
 SHARP-FISH 1.0 (March 2026)
 -----------------------------
