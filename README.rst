@@ -1,4 +1,4 @@
-SoloMicrobe
+SHARP-FISH
 =========================
 
 This repository provides comprehensive documentation for the SoloMicrobe tool. 
