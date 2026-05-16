@@ -6,7 +6,7 @@ This page documents the release history of SHARP-FISH, including new features, i
 SHARP-FISH 1.0 (March 2026)
 -----------------------------
 
-Initial public release of SoloMicrobe.
+Initial public release of SHARP-FISH.
 
 **Features**
 
